@@ -42,7 +42,7 @@ var server = net.createServer(function(socket) {
         console.log('Fim: '+completeData);
                 
         // socket.write(completeData);
-        socket.end();
+        // socket.end();
         
     });
     
