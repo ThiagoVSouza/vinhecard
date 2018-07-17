@@ -14,7 +14,7 @@ var server = net.createServer(function(socket) {
         
         completeData = chunk;
         
-        socket.write(""+completeData.substring(2));
+        socket.write(completeData);
         
     /*    
         completeData = completeData + chunk;
