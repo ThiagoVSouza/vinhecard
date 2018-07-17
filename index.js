@@ -14,6 +14,8 @@ var server = net.createServer(function(socket) {
         
         completeData = chunk;
         
+        console.log('Chunk: '+chunk);
+        
         completeData = completeData.replace("1800", "1810");
             
         // "G01810A030000208E0000800000000000000209900008027521807121432270800008640000000679130000086400000000000008942010000000000000000001070VB18201807121109268859VI18201807121109268859VE00VC18201807121109268859013W?F313.D01233";
@@ -21,6 +23,9 @@ var server = net.createServer(function(socket) {
         socket.write(completeData);
         
         socket.end();
+        
+        console.log('Fim');
+        
         
     /*    
         completeData = completeData + chunk;
