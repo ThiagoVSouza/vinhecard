@@ -12,6 +12,9 @@ var server = net.createServer(function(socket) {
     
     socket.on('data', function(chunk) {
         
+        socket.write("Hello world!");
+        
+    /*    
         completeData = completeData + chunk;
         
         console.log('Chunk: '+chunk);
@@ -19,7 +22,7 @@ var server = net.createServer(function(socket) {
         socket.pipe("RESP:"+completeData);
         
          console.log('Pipe: '+completeData);
-       
+       */
         // socket.end();
         
         
