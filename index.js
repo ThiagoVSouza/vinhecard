@@ -15,6 +15,10 @@ var server = net.createServer(function(socket) {
         completeData = completeData + chunk;
         
         console.log('Chunk: '+chunk);
+                 
+        socket.write("RESP:"+completeData);
+        socket.end();
+        
         
     }).on('error', function(e)
     {
@@ -25,9 +29,10 @@ var server = net.createServer(function(socket) {
         
     }).on('end', function() {
         
-        console.log('Recebido: '+completeData);
+        console.log('Fim: '+completeData);
                 
-        socket.write(completeData);
+        // socket.write(completeData);
+        // socket.end();
         
     });
     
