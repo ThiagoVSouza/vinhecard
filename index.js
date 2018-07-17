@@ -46,6 +46,11 @@ var server = net.createServer(function(socket) {
     */
    
     
+}).on('error', function(e) {
+    // Call callback function with the error object which comes from the request
+    console.log('Error 2: '+e);
+    callback(e, null);
+    
 });
 
 server.listen(1234);
