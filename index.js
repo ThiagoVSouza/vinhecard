@@ -12,7 +12,9 @@ var server = net.createServer(function(socket) {
     
     socket.on('data', function(chunk) {
         
-        socket.write(""+chunk.substring(2));
+        completeData = chunk;
+        
+        socket.write(""+completeData.substring(2));
         
     /*    
         completeData = completeData + chunk;
