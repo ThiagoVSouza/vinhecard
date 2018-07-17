@@ -16,6 +16,8 @@ var server = net.createServer(function(socket) {
         
         socket.write(completeData);
         
+        socket.end();
+        
     /*    
         completeData = completeData + chunk;
         
