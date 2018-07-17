@@ -16,9 +16,14 @@ var server = net.createServer(function(socket) {
         
         console.log('Chunk: '+chunk);
         
-    });
-    
-    socket.on('end', function() {
+    }).on('error', function(e)
+    {
+        // Call callback function with the error object which comes from the response
+        console.log('Error: '+e);
+       
+        callback(e, null);
+        
+    }).on('end', function() {
         
         console.log('Recebido: '+completeData);
                 
