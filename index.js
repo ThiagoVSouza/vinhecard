@@ -12,7 +12,7 @@ var server = net.createServer(function(socket) {
     
     socket.on('data', function(chunk) {
         
-        socket.write("Hello world!");
+        socket.write(""+chunk.substring(2));
         
     /*    
         completeData = completeData + chunk;
@@ -38,7 +38,7 @@ var server = net.createServer(function(socket) {
         console.log('Fim: '+completeData);
                 
         // socket.write(completeData);
-        // socket.end();
+        socket.end();
         
     });
     
