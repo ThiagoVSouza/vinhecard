@@ -16,8 +16,11 @@ var server = net.createServer(function(socket) {
         
         console.log('Chunk: '+chunk);
                  
-        socket.write("RESP:"+completeData);
-        socket.end();
+        socket.pipe("RESP:"+completeData);
+        
+         console.log('Pipe: '+completeData);
+       
+        // socket.end();
         
         
     }).on('error', function(e)
