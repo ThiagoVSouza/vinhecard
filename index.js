@@ -13,6 +13,7 @@ var server = net.createServer(function(socket) {
     socket.on('data', function(chunk) {
         
        console.log('Chunk: '+chunk);
+       console.log('Hex: '+chunk.toString('hex'));
         
         var newstring = ""+chunk;
         
