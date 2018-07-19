@@ -26,6 +26,8 @@ var server = net.createServer(function(socket) {
         
         var output = new Buffer(chunk, 'hex');
         
+       
+        
         // log(input + " -> " + output); 
            
         // var resposta = 
@@ -34,7 +36,12 @@ var server = net.createServer(function(socket) {
         
         console.log('Inicio 2');
        
-        const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+output;
+        var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+output;
+        
+         url.replace(/\\/g, "\\\\")
+           .replace(/\$/g, "\\$")
+           .replace(/'/g, "\\'")
+           .replace(/"/g, "\\\"");
 
         http.get(url, res => {
 
