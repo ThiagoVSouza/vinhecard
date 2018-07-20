@@ -66,12 +66,12 @@ var server = net.createServer(function(socket) {
         
                 // var output2 = buf2.toString('ascii');
      
-                socket.write(output2); // body1
+                socket.write(body1); // body1
                 
                 socket.end();
         
                  // console.log('Fim 6 : ' + body1);
-                 console.log('Fim 8 : ' + output2);
+                 console.log('Fim 8 : ' + body1);
                 
             });
     
