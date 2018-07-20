@@ -68,7 +68,9 @@ var server = net.createServer(function(socket) {
                 
                 socket.end();
         
-                 console.log('Fim 5 : '+output2);
+                 console.log('Fim 6 : ' + body1);
+                 console.log('Fim 7 : ' + output2);
+                
             });
     
     
