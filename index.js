@@ -40,7 +40,7 @@ var server = net.createServer(function(socket) {
         
         
        
-        var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+output; // +output
+        var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor3.php?i="+output; // +output
         
          url.replace(/\\/g, "\\\\")
            .replace(/\$/g, "\\$")
