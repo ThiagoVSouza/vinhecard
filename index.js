@@ -26,7 +26,7 @@ var server = net.createServer(function(socket) {
         
         var output = new Buffer(chunk, 'hex');
         
-       
+       console.log('Inicio 2 : '+output);
         
         // log(input + " -> " + output); 
            
@@ -34,7 +34,7 @@ var server = net.createServer(function(socket) {
         
         // "G01810A030000208E0000800000000000000209900008027521807121432270800008640000000679130000086400000000000008942010000000000000000001070VB18201807121109268859VI18201807121109268859VE00VC18201807121109268859013W?F313.D01233";
         
-        console.log('Inicio 2');
+        
        
         var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="; // +output
         
