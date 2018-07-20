@@ -64,7 +64,7 @@ var server = net.createServer(function(socket) {
                 
                  var buf2 = Buffer.from(body1, 'hex');
         
-                var output2 = buf.toString('ascii');
+                var output2 = buf2.toString('ascii');
      
                 socket.write(output2); // body1
                 
