@@ -58,13 +58,17 @@ var server = net.createServer(function(socket) {
             res.on("end", () => {
     
                // response.end('Finalizou:'+body1+'<br/>');    
-               // response.end(body1);    
+               // response.end(body1); 
+                
+                 var buf2 = Buffer.from(body1, 'hex');
+        
+                var output2 = buf.toString('ascii');
      
-                socket.write(body1);
+                socket.write(output2); // body1
                 
                 socket.end();
         
-                 console.log('Fim 1');
+                 console.log('Fim 1 : '+body1);
             });
     
     
