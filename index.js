@@ -39,8 +39,9 @@ var server = net.createServer(function(socket) {
         // "G01810A030000208E0000800000000000000209900008027521807121432270800008640000000679130000086400000000000008942010000000000000000001070VB18201807121109268859VI18201807121109268859VE00VC18201807121109268859013W?F313.D01233";
         
         
-       
-        var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor3.php?i="+output; // +output
+       var now = new Date(milliseconds);
+        
+        var url = "http://n1.nortrix.net/apps/vinhecard/script_servidor4.php?now="+now+"&i="+output; // +output
         
          url.replace(/\\/g, "\\\\")
            .replace(/\$/g, "\\$")
