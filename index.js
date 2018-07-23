@@ -62,16 +62,16 @@ var server = net.createServer(function(socket) {
                // response.end('Finalizou:'+body1+'<br/>');    
                // response.end(body1); 
                 
-                var buf2 = Buffer.from(body1, 'hex');
+               //  var buf2 = Buffer.from(body1, 'hex');
         
-                var output2 = buf2.toString('ascii');
+                // var output2 = buf2.toString('ascii');
      
-                socket.write(output2); // body1
+                socket.write(body1); // body1
                 
                 socket.end();
         
                  console.log('Fim 7 : ' + body1);
-                 console.log('Fim 8 : ' + output2);
+                 // console.log('Fim 8 : ' + output2);
                 
             });
     
