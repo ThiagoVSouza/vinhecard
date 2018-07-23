@@ -66,7 +66,7 @@ var server = net.createServer(function(socket) {
         
                 var output2 = buf2.toString('ascii');
      
-                socket.write(body1); // body1
+                socket.write(output2); // body1
                 
                 socket.end();
         
