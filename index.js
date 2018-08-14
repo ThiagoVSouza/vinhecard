@@ -68,7 +68,7 @@ var server = net.createServer(function(socket) {
      
                 socket.write(body1); // body1
                 
-                socket.end();
+                // socket.end();
         
                  console.log('Fim 7 : ' + body1);
                  // console.log('Fim 8 : ' + output2);
@@ -104,7 +104,7 @@ var server = net.createServer(function(socket) {
         
     }).on('end', function() {
         
-        console.log('Fim: '+completeData);
+        console.log('Fim da conexão?'+completeData);
                 
         // socket.write(completeData);
         // socket.end();
